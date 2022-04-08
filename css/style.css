@@ -14,14 +14,14 @@
     margin-bottom: 1rem;
 }
 
-.center{
+.centriraj{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.btn{
+.centriraj.btn{
     width: 15%;
     margin-bottom: 2rem;
 }
