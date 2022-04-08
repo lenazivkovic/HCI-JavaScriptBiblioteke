@@ -1,0 +1,35 @@
+.header{
+    padding: 1rem;
+}
+
+.fotka img{
+    max-width: 80%;
+}
+
+.fotka{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 15%;
+    margin-bottom: 2rem;
+}
+
+body{
+    background-image: url("../img/background.webp");
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
