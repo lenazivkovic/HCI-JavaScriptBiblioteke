@@ -30,7 +30,7 @@
             
 		</div>
 
-        <div class="center">
+        <div class="centriraj">
             <div id="summernote" style="padding: 1rem;">Ovo je trenutak kada je Cezar verovatno video hranu.</div>
 
             <button class="btn btn-primary" id="dugme" onclick="menjaj();">Promenite opis !</button>
@@ -58,7 +58,7 @@
                     message: "Da li ste sigurni ?",
                     callback: function(result){
 
-                        let input = dugme.innerText;
+                        let input = document.getElementById("summernote").innerText;
 
                         if(result === true){
                             var markupStr = $('#summernote').summernote('code');
