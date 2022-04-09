@@ -1,12 +1,12 @@
-.header{
+.naslov{
     padding: 1rem;
 }
 
-.fotka img{
+.slika img{
     max-width: 80%;
 }
 
-.fotka{
+.slika{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 body{
-    background-image: url("../img/background.webp");
+    background-image: url("../slike/background.webp");
 }
 
 h1{

@@ -5,58 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
 
-        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
     <link rel="stylesheet" href="./css/style.css">
-    <title>HCI - Lab 03</title>
+    <title>Lenina galerija - White flowers</title>
 </head>
 <body>
     
     <div class="container">
 
-        <div class="header" align="center">
+        <div class="naslov" align="center">
             <h1>White flowers</h1>
         </div>
 
-        <div class="fotka">
-            <img src="img/img8.jpg">
+        <div class="slika">
+            <img src="slike/slika8.jpg">
             
 		</div>
 
         <div class="centriraj">
             <div id="summernote" style="padding: 1rem;">Beautiful.</div>
 
-            <button class="btn btn-primary" id="dugme" onclick="menjaj();">Promenite opis !</button>
+            <button class="btn btn-primary" id="btn" onclick="change();">Menjanje opisa</button>
         </div>
         
 
         <script>
 
-            var dugme = document.getElementById("dugme");
+            var btn = document.getElementById("btn");
 
-            var menjaj = () =>{
+            var change = () =>{
 
                 $('#summernote').summernote({
                     tabsize: 2,
                     height: 100
                 });
 
-                dugme.innerText = "Sacuvaj !";
-                dugme.setAttribute("onclick","sacuvaj();");
+                btn.innerText = "Cuvanje promena";
+                btn.setAttribute("onclick","save();");
             }
 
-            var sacuvaj = () =>{
+            var save = () =>{
 
                 bootbox.confirm({ 
                     size: "small",
-                    message: "Da li ste sigurni ?",
+                    message: "Da li sigurno želite promenu?",
                     callback: function(result){
 
                         let input = document.getElementById("summernote").innerText;
@@ -69,8 +71,8 @@
                         }
 
                         $('#summernote').summernote('destroy');
-                        dugme.innerText = "Promenite opis !";
-                        dugme.setAttribute("onclick","menjaj();");
+                        btn.innerText = "Menjanje opisa";
+                        btn.setAttribute("onclick","change();");
                     }
                 })
                     
